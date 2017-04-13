@@ -1,0 +1,19 @@
+@(productForm: Form[Product])
+  (implicit flash: Flash, messages: Messages)
+@import helper._
+@main(Messages("products.form")) {
+  <h2>@Messages("products.form")</h2>
+
+  @helper.form(action = routes.Products.save()) {
+  <fieldset>
+    <legend>
+      @Messages("products.details", Messages("products.new"))
+    </legend>
+  @helper.inputText(productForm("ean"))
+  @helper.inputText(productForm("name"))
+  @helper.textarea(productForm("description"))
+  </fieldset>
+  <p><button type="submit" class="btn btn-default">
+    @Messages("products.new.submit")</button></p>
+  }
+}
