@@ -1,0 +1,15 @@
+<!-- 목록 6.10  리팩토링된 카탈로그 템플릿 -->
+
+@(products: Seq[Product])
+
+@main {
+  <h2>Catalog</h2>
+  <ul>
+    @for(product <- products) {
+      <li>
+	<h3>@product.name</h3>
+	<p class="description">@product.description</p>
+      </li>
+    }
+  </ul>
+}

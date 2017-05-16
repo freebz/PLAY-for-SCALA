@@ -1,0 +1,13 @@
+// 목록 6.4  플레이2 스칼라 템플릿
+
+@(articles: Seq[models.Article])
+<h1>Articles</h1>
+<ul>
+@for(article <- articles) {
+  <li>
+    @article.name
+    <a href="@controllers.routes.Articles.show(article.id)">
+      details</a>
+  </li>
+}
+</ul>

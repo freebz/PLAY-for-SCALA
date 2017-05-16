@@ -1,0 +1,11 @@
+// 목록 6.3  플레이 1.x 그루비 템플릿
+
+<h1>Articles</h1>
+<ul>
+  #{list articles, as:'article'}
+  <li>
+    ${article.name} -
+    <a href="@{Articles.show(article.id)}">details</a>
+  </li>
+  #{/list}
+</ul>

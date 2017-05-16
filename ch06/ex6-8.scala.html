@@ -1,0 +1,26 @@
+<!-- 목록 6.8  추출된 페이지 레이아웃 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>paperclips.example.com</title>
+    <link rel="stylesheet" type="text/css" media="screen" href='@routes.Assets.virsioned("lib/bootstrap/css/bootstrap.css")'>
+    <link rel="stylesheet" type="text/css" media="screen" href='@routes.Assets.versioned("stylesheets/main.css")'>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="screenshot">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-header">
+	  <a class="navbar-brand" href="@routes.Application.index()">
+	    Paper-Clip Company Inc.
+	  </a>
+	</div>
+	@navigation()
+      </div>
+      <div class="container">
+	// Content here
+      </div>
+    </div>
+  </body>
+</html>

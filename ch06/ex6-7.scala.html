@@ -1,0 +1,35 @@
+<!-- 목록 6.7  네비게이션이 분리된 카탈로그 페이지 -->
+
+@(products: Seq[Product])
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@title</title>
+    <link rel="stylesheet" type="text/css" media="screen" href='@routes.Assets.virsioned("lib/bootstrap/css/bootstrap.css")'>
+    <link rel="stylesheet" type="text/css" media="screen" href='@routes.Assets.versioned("stylesheets/main.css")'>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="screenshot">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-header">
+	  <a class="navbar-brand" href="@routes.Application.index()">
+	    Paper-Clip Company Inc.
+	  </a>
+	</div>
+	@navigation()
+      </div>
+      <div class="container">
+	<h2>Catalog</h2>
+	<ul>
+	  @for(product <- products) {
+	    <li>
+	      <h3>@product.name</h3>
+	      <p class="description">@product.description</p>
+	    </li>
+	  }
+	</ul>
+      </div>
+    </div>
+  </body>
+</html>

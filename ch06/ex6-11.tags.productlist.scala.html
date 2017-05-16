@@ -1,0 +1,23 @@
+<!-- 목록 6.11  추출된 상품 리스트 -->
+
+@(products: Seq[Product])
+  <ul>
+    @for(product <- products) {
+      <li>
+	<h3>@product.name</h3>
+	<p class="description">@product.description</p>
+      </li>
+    }
+  </ul>
+}
+
+
+
+
+<!-- catalog.scala.html -->
+
+@(products: Seq[Product])
+@main {
+  <h2>Products</h2>
+  @views.html.products.tags.productlist(products)
+}
