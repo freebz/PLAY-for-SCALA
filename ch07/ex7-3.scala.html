@@ -1,0 +1,32 @@
+<!-- 목록 7.3  간소화된 상품 추가 폼 HTML -->
+
+@()
+
+@main("Product Form"){
+
+  <form action="@routes.Products.create()" method="post">
+    <div>
+      <label for="name">Product name</label>
+      <input type="text" name="name" id="name">
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <textarea id="description" name="description"></textarea>
+    </div>
+    <div>
+      <label for="ean">EAN Code</label>
+      <input type="text" name="ean" id="ean">
+    </div>
+    <div>
+      <label for="pieces">Pieces</label>
+      <input type="text" name="pieces" id="pieces">
+    </div>
+    <div>
+      <label for="active">Active</label>
+      <input type="checkbox" name="active" value="true">
+    </div>
+    <div class="buttons">
+      <button type="submit">Create Product</button>
+    </div>
+  </form>
+}

@@ -1,0 +1,18 @@
+<!-- 목록 7.11  커스텀 FieldConstructor를 사용한 상품 폼 -->
+
+@(productForm: Form[Product])
+
+@import views.html.helper.bootstrap._
+
+@main("Product Form") {
+  @helper.form(action = routes.GeneratedForm.create) {
+    @helper.inputText(productForm("name"))
+    @helper.textarea(productForm("description"))
+    @helper.inputText(productForm("ean"))
+    @helper.inputText(productForm("pieces"))
+    @helper.checkbox(productForm("active"))
+    <div class="form-actions">
+      <button type="submit">Create Product</button>
+    </div>
+  }
+}

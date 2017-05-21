@@ -1,0 +1,16 @@
+<!-- 목록 7.5  폼 헬퍼를 사용하여 HTML 폼을 작성한 템플릿 -->
+
+@(productForm: Form[Product])
+
+@main("Product Form") {
+  @helper.form(action = routes.GeneratedForm.create) {
+    @helper.inputText(productForm("name"))
+    @helper.textarea(productForm("description"))
+    @helper.inputText(productForm("ean"))
+    @helper.inputText(productForm("pieces"))
+    @helper.checkbox(productForm("active"))
+    <div class="form-actions">
+      <button type="submit">Create Product</button>
+    </div>
+  }
+}

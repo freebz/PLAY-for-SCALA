@@ -1,0 +1,43 @@
+<!-- 목록 7.7  검증 오류와 이전 값으로 채워진 상품 폼 -->
+
+<form action="/create" method="POST" >
+  <dl id="name_field" class=" ">
+    <dt><label for="name">name</label></dt>
+    <dd>
+      <input type="text" value="Blue Coated Paper Clips" name="name" id="name" />
+    </dd>
+    <dd class="info">Required</dd>
+  </dl>
+  <dl id="description_field" class=" ">
+    <dt><label for="description">description</label></dt>
+    <dd>
+      <textarea id="description" name="description">Bucket of small blue coated paper clips.</textarea>
+    </dd>
+  </dl>
+  <dl id="ean_field" class=" error">
+    <dt><label for="ean">ean</label></dt>
+    <dd>
+      <input type="text" value="" name="ean" id="ean">
+    </dd>
+    <dd class="error">Numeric value expected</dd>
+    <dd class="info">Numeric</dd>
+  </dl>
+  <dl id="pieces_field" class=" ">
+    <dt><label for="pieces">pieces</label></dt>
+    <dd>
+      <input type="text" value="500" name="pieces" id="pieces">
+    </dd>
+    <dd class="info">Numeric</dd>
+  </dl>
+  <dl id="active_field" class=" ">
+    <dt><label for="active">active</label></dt>
+    <dd>
+      <input type="checkbox" checked="checked" value="true" name="active" id="active">
+      <span></span>
+    </dd>
+    <dd class="info">Activated</dd>
+  </dl>
+  <div class="form-actions">
+    <button type="submit">Create Product</button>
+  </div>
+</form>

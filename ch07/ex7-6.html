@@ -1,0 +1,42 @@
+<!-- 목록 7.6  폼 헬퍼가 생성한 상품 폼 HTML -->
+
+<form action="/create" method="POST" >
+  <dl class=" " id="name_field">
+    <dt><label for="name">name</label></dt>
+    <dd>
+      <input type="text" id="name" name="name" value="" />
+    </dd>
+    <dd class="info">REQUIRED</dd>
+  </dl>
+  <dl class=" " id="description_field">
+    <dt><label for="description">description</label></dt>
+    <dd>
+      <textarea id="description" name="description" ></textarea>
+    </dd>
+  </dl>
+  <dl class=" " id="ean_field">
+    <dt><label for="ean">ean</label></dt>
+    <dd>
+      <input type="text" id="ean" name="ean" value="" />
+    </dd>
+    <dd class="info">Numeric</dd>
+  </dl>
+  <dl class=" " id="pieces_field">
+    <dt><label for="pieces">pieces</label></dt>
+    <dd>
+      <input type="text" id="pieces" name="pieces" value="" />
+    </dd>
+    <dd class="info">Numeric</dd>
+  </dl>
+  <dl class=" " id="active_field">
+    <dt><label for="active">active</label></dt>
+    <dd>
+      <input type="checkbox" id="active" name="active" value="true" />
+      <span></span>
+    </dd>
+    <dd class="info">format.boolean</dd>
+  </dl>
+  <div class="form-actions">
+    <button type="submit">Create Product</button>
+  </div>
+</form>
