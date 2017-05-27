@@ -1,0 +1,7 @@
+// 목록 8.9  바람직한 출력 - Product 객체의 JSON 표현
+
+{
+    "ean" : 5015520079763,
+    "name" : "Paperclips Large",
+    "description" : "Large Plain Pack of 1000"
+}

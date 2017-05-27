@@ -1,0 +1,21 @@
+// 목록 8.21  상품 JSON 구조 예제
+
+{
+    "name": "Blue Paper clips",
+    "ean": "12345432123",
+    "description": "Big box of paper clips",
+    "pieces": 500,
+    "manufacturer": {
+	"name": "Paperclipfactory Inc.",
+	"contact_details" {
+	    "email": "contact@paperclipfactory.example.com",
+	    "fax": null,
+	    "phone": "+12345654321"
+	}
+    },
+    "tags": [
+	"paperclip",
+	"coated"
+    ],
+    "active": true
+}
